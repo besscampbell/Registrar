@@ -8,4 +8,4 @@
 <hr/>
 <h3>Enrollment Date: @Html.DisplayFor(model => model.EnrollmentDate)</h3>
 
-<p>@Html.ActionLink("Student Roster", "Index") | @Html.ActionLink("Update Information", "Edit", new { id = Model.StudentId})</p>
+<p>@Html.ActionLink("Student Roster", "Index") | @Html.ActionLink("Update Information", "Edit", new { id = Model.StudentId }) | @Html.ActionLink("Delete Student", "Delete", new { id = Model.StudentId })</p>

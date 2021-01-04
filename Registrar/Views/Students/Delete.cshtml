@@ -1,0 +1,14 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Registrar.Models.Student
+
+<h2>Are you sure you would like to delete @Html.DisplayFor(model => model.Name) and all of their information?
+</h2>
+@using(Html.BeginForm())
+{
+    <input type="submit" value="Delete" class="btn btn-danger">
+}
+
+<p>@Html.ActionLink("Student Roster", "Index") | @Html.ActionLink("Update Information", "Edit", new { id = Model.StudentId })</p>
