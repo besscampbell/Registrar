@@ -1,0 +1,22 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Registrar.Models.Student
+
+<h2>Update information for @Html.DisplayFor(model => model.Name)</h2>
+<hr/>
+@using(Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.StudentId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.EnrollmentDate)
+    @Html.EditorFor(model => model.EnrollmentDate)
+
+    <input type="submit" value="Save" class="btn btn-info">
+}
+
+<p>@Html.ActionLink("Student Roster", "Index")</p>

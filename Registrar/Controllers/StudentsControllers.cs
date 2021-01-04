@@ -42,7 +42,7 @@ namespace Registrar.Controllers
 
         public ActionResult Edit(int id)
         {
-            var thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
+            Student thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
             return View(thisStudent);
         }
 
