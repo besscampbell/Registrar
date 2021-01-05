@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System;
-// using MySql.Data.MySqlClient;
 
 namespace Registrar.Models
 {
