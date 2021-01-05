@@ -13,6 +13,9 @@
 
     @Html.LabelFor(model => model.EnrollmentDate)
     @Html.TextBoxFor(model => model.EnrollmentDate,  new {@type="date"})
+
+    @Html.Label("Select Course")
+    @Html.DropDownList("CourseId")
  
     <input type="submit" value="+Student" class="btn btn-info">
 }

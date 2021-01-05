@@ -16,6 +16,9 @@
     @Html.LabelFor(model => model.EnrollmentDate)
     @Html.EditorFor(model => model.EnrollmentDate)
 
+    @Html.Label("Select course")
+    @Html.DropDownList("CourseId")
+
     <input type="submit" value="Save" class="btn btn-info">
 }
 
