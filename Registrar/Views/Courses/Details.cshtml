@@ -1,0 +1,12 @@
+@{
+    Layout = "_Layout";
+}
+
+@model Registrar.Models.Course;
+
+<h2>Information for @Html.DisplayFor(model => model.Name)</h2>
+<hr/>
+
+<h3>@Html.DisplayNameFor(model => model.Code) : @Html.DisplayFor(model => model.Code)</h3>
+</br>
+<p>@Html.ActionLink("Courses", "Index") | @Html.ActionLink("Students", "Index", "Students")</p>
