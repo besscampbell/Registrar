@@ -9,4 +9,14 @@
 
 <h3>@Html.DisplayNameFor(model => model.Code) : @Html.DisplayFor(model => model.Code)</h3>
 </br>
-<p>@Html.ActionLink("Courses", "Index") | @Html.ActionLink("Students", "Index", "Students")</p>
+<h3>Class Roster:</h3>
+@if(Model.Students.Count == 0)
+{
+    <h3>No students have signed up for this course yet.</h3>
+}
+@foreach(var join in Model.Students)
+{
+    <h3>@Html.ActionLink($"{join.Student.Name}", "Details", "Students", new { id = join.StudentId})</h3>
+}
+</br>
+<p>@Html.ActionLink("Courses", "Index") | @Html.ActionLink("Students", "Index", "Students") | @Html.ActionLink("Add new student", "Create", "Students")</p>

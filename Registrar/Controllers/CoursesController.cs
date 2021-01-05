@@ -35,8 +35,8 @@ namespace Registrar.Controllers
         public ActionResult Details(int id)
         {
             var thisCourse = _db.Courses
-                //.Include(course => course.Students)
-                //.ThenInclude(join => join.Student)
+                .Include(course => course.Students)
+                .ThenInclude(join => join.Student)
                 .FirstOrDefault(course => course.CourseId == id);
             return View(thisCourse);
         }
