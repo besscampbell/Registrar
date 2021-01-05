@@ -18,5 +18,8 @@ namespace Registrar.Models
         public DateTime EnrollmentDate { get; set; }
 
         public ICollection<CourseStudent> Courses { get; }
+
+        public int DeptId { get; set; }
+        public Dept Dept { get; set; }
     }
 }

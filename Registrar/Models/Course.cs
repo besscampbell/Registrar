@@ -13,5 +13,7 @@ namespace Registrar.Models
         public string Code { get; set; }
 
         public virtual ICollection<CourseStudent> Students { get; set; }
+        public int DeptId { get; set; }
+        public Dept Dept { get; set; }
     }
 }
