@@ -8,18 +8,17 @@ using Registrar.Models;
 
 namespace Registrar.Controllers
 {
-    public class DeptController : Controller
+    public class DeptsController : Controller
     {
         private readonly RegistrarContext _db;
-        public DeptController(RegistrarContext db)
+        public DeptsController(RegistrarContext db)
         {
             _db = db;
         }
 
         public ActionResult Index()
         {
-            List<Dept> model = _db.Depts.ToList();
-            return View(model);
+            return View(_db.Depts.ToList());
         }
 
         public ActionResult Create()
